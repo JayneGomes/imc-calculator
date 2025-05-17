@@ -1,7 +1,33 @@
 .container {
-  min-width: 400px;
+  width: 80%;
+  max-width: 900px;
+  min-width: 400px; 
   min-height: 400px;
-  background-color: #1d1e33;
-  padding: 2rem;
-  border-radius: 1rem;
+  background-color: #121524;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #eee;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    min-width: unset; 
+    padding: 2rem 1rem;
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    min-width: 400px;
+    padding: 2rem 1.5rem;
+  }
 }

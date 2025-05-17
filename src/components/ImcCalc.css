@@ -1,34 +1,76 @@
+#calc-container {
+  width: 100%;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 #calc-container h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00ff99;
 }
 
 .form-inputs {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .form-control {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin-bottom: 1rem;
 }
 
 .form-control label {
-  font-weight: bold;
-  margin-bottom: 0.6rem;
-  color: #ccc;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #aaa;
 }
 
 .form-control input {
-  padding: 1rem 0.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #2f334b;
+  border-radius: 8px;
+  background-color: #1f2233;
+  color: #eee;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #00ff99;
 }
 
 .action-control {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
   margin-top: 2rem;
+  justify-content: center;
+}
+
+.action-control button:first-child {
+  background-color: #00ff99;
+}
+
+.action-control button:first-child:hover {
+  background-color: #00e68a;
+}
+
+.action-control button#clear-btn {
+  background-color: #555;
+  color: #eee;
+}
+
+.action-control button#clear-btn:hover {
+  background-color: #444;
+}
+
+@media (max-width: 480px) {
+  .action-control {
+    flex-direction: column;
+  }
 }
